@@ -7,8 +7,7 @@ module.exports = {
   entry: `./src/js/entry.js`,
 
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.pug$/,
         loader: 'pug-loader'
       },
@@ -18,16 +17,16 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                ['env', {'modules': false}]
-              ]
-            }
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', {
+                'modules': false
+              }]
+            ]
           }
-        ]
+        }]
       },
       {
         test: /\.(jpg|png)$/,
@@ -39,27 +38,24 @@ module.exports = {
       }
     ]
   },
-  externals: [
-    {
-      jquery: 'jQuery'
-    }
-  ],
+  externals: [{
+    jquery: 'jQuery'
+  }],
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'index',
-        filename: 'index.html',
-        template: './src/pug/index.pug'
+      title: 'index',
+      filename: 'index.html',
+      template: './src/pug/index.pug'
     }),
-      //htmlがふえたらHtmlWebpackPluginを増やすしかない
-    new HtmlWebpackPlugin({
-    title: 'photo-gellery',
-    filename: 'gallery.html',
-    template: './src/pug/gallery.pug'
-    }),
+    // //htmlがふえたらHtmlWebpackPluginを増やすしかない
+    // new HtmlWebpackPlugin({
+    //   title: 'photo-gellery',
+    //   filename: 'gallery.html',
+    //   template: './src/pug/gallery.pug'
+    // }),
     //enable build-files to reffer node_env by variable 'NODE_ENV'
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ]
 };
-
