@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prod": "npm-run-all -p prod:*",
-    "prod:clean": "rimraf ./templates/* && rimraf ./js/*",
+    "prod:clean": "rimraf ./lilweb-214604/www/*",
     "prod:build": "NODE_ENV=production webpack --config webpack.prod.config.js",
     "local": "npm-run-all local:*",
     "local:clean": "rimraf ./local/js/*",

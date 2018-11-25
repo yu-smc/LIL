@@ -8,7 +8,7 @@ const config = merge(baseConfig, {
   mode: 'production',
 
   output: {
-    path: path.resolve(__dirname, 'lilweb-214604'),
+    path: path.resolve(__dirname, 'lilweb-214604/www'),
     filename: 'js/bundle-' + (new Date()).getTime() + '.js',
     publicPath: '/',
   },
