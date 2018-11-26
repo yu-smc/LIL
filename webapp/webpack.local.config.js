@@ -9,8 +9,8 @@ const config = merge(baseConfig, {
 
   output: {
 
-    path:      path.resolve(__dirname, 'local'),
-    filename:  'js/bundle-' + (new Date()).getTime() + '.js'
+    path: path.resolve(__dirname, 'local'),
+    filename: 'js/bundle-' + (new Date()).getTime() + '.js'
   },
 
   plugins: [
@@ -20,11 +20,11 @@ const config = merge(baseConfig, {
       template: './src/pug/index.pug'
     }),
     //htmlがふえたらHtmlWebpackPluginを増やすしかない
-    new HtmlWebpackPlugin({
-      title: 'photo-gellery',
-      filename: 'gallery.html',
-      template: './src/pug/gallery.pug'
-    }),
+    // new HtmlWebpackPlugin({
+    //   title: 'photo-gellery',
+    //   filename: 'gallery.html',
+    //   template: './src/pug/gallery.pug'
+    // }),
   ],
 
   devServer: {
