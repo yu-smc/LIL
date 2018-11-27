@@ -4,20 +4,41 @@ html(lang="ja")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description" content="4ピースロックバンド 'Long Island Lauren'の公式webサイトです。")
     style(type="text/css").
-      body {
+      body, html {
         background-color: #D8FFE4;
       }
       .index.display {
         display: block !important;
       }
+      #loading-msg {
+        position: absolute;
+        width: 100vw;
+        height: 80vh;
+        line-height: 100vh;
+        text-align: center; 
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      #loading-msg p {
+        color: #6A758F;
+        font-size: 1.4rem;
+      }
+      #loading-msg.hide {
+        display: none;
+      }
     script.
       window.onload = function() {
+        document.getElementById("loading-msg").classList.add("hide")
         document.getElementById("index").classList.add("display")
       }
     title Long Island Lauren
   body
     .loading
+      p#loading-msg(style="font-family: serif;") Loading...
     .index#index(style="display:none")
       .index-topImage
         .index-title

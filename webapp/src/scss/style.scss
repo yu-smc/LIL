@@ -8,8 +8,17 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: serif;
   box-sizing: border-box;
+}
+
+p,
+small,
+h1,
+h2,
+a,
+li,
+span {
+  font-family: "Times New Roman", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS Pゴシック", "MS PGothic", serif;
 }
 
 h1 {
