@@ -122,7 +122,13 @@ a {
           opacity: 0;
         }
       }
+
+
+      @media screen and (max-width: 768px) {
+        opacity: 0;
+      }
     }
+
 
 
     &__coverLogoW {
@@ -145,7 +151,15 @@ a {
         100% {
           size: 20%;
         }
+
       }
+
+
+      @media screen and (max-width: 768px) {
+        opacity: 0;
+      }
+
+
     }
   }
 
