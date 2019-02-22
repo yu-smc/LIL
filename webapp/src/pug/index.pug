@@ -7,45 +7,15 @@ html(lang="ja")
     meta(name="description" content="4ピースロックバンド 'Long Island Lauren'の公式webサイトです。")
     style(type="text/css").
       body, html {
-        background-color: #D8FFE4;
+        background-color: white;
       }
-      .index.display {
-        display: block !important;
-      }
-      #loading-msg {
-        position: absolute;
-        width: 100vw;
-        height: 80vh;
-        line-height: 100vh;
-        text-align: center; 
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-      #loading-msg p {
-        color: #6A758F;
-        font-size: 1.4rem;
-      }
-      #loading-msg.hide {
-        display: none;
-      }
-    script.
-      window.onload = function() {
-        document.getElementById("loading-msg").classList.add("hide")
-        document.getElementById("index").classList.add("display")
-      }
+
   body
-    .loading
-      p#loading-msg(style="font-family: serif;") Loading...
-    .index#index(style="display:none")
+    .index#index(style="display: none")
       .index-topImage
-        .index-title
-          p Long
-            br
-            | Island
-            br
-            | Lauren
+        .index-topImage__whiteCover
+        .index-topImage__coverLogoB
+        .index-topImage__coverLogoW
         .scroll-arrow
       //- .index-nextLive
       //-   .index-nextLive_title 
@@ -76,7 +46,6 @@ html(lang="ja")
           //-     p TICKET:
           //-   .index-nextLive_body_info_body
           //-     p 前売￥2,000 / 当日￥2,500 (ドリンク代別)
-      .index-img--1
       .index-works
         .index-works_title 
           h1 Works
@@ -127,3 +96,7 @@ html(lang="ja")
         p Copyright © 2018 Long Island Lauren
         p All Rights Reserved.
         small Website created by Yu Takada
+  script.
+    window.onload = function() {
+      document.getElementById("index").style = 'display: block';
+    }
