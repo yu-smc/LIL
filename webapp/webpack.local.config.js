@@ -10,7 +10,7 @@ const config = merge(baseConfig, {
   output: {
 
     path: path.resolve(__dirname, 'local'),
-    filename: 'js/bundle-' + (new Date()).getTime() + '.js'
+    filename: 'js/bundle-[name]' + (new Date()).getTime() + '.js'
   },
 
   plugins: [
