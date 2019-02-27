@@ -4,10 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
-  entry: {
-    critical: './src/js/entry.critical.js',
-    main: './src/js/entry.js',
-  },
+  entry: `./src/js/entry.js`,
 
   module: {
     rules: [{
