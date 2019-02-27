@@ -9,7 +9,7 @@ const config = merge(baseConfig, {
 
   output: {
     path: path.resolve(__dirname, 'lilweb-214604/www'),
-    filename: 'js/bundle-' + (new Date()).getTime() + '.js',
+    filename: 'js/bundle-[name]' + (new Date()).getTime() + '.js',
     publicPath: '/',
   },
 });
